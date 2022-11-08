@@ -1,0 +1,11 @@
+<environmentvariabledefinition schemaname="e20_TestEnVariable1">
+  <defaultvalue>ThisIsALongAndUsefulString</defaultvalue>
+  <displayname default="Test EnVariable 1">
+    <label description="Test EnVariable 1" languagecode="1033" />
+  </displayname>
+  <introducedversion>1.0.0.0</introducedversion>
+  <iscustomizable>1</iscustomizable>
+  <isrequired>0</isrequired>
+  <secretstore>0</secretstore>
+  <type>100000000</type>
+</environmentvariabledefinition>

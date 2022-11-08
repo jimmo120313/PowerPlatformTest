@@ -1,0 +1,116 @@
+{
+  "properties": {
+    "connectionReferences": {
+      "shared_office365": {
+        "runtimeSource": "embedded",
+        "connection": {
+          "connectionReferenceLogicalName": "e20_sharedoffice365_2ee3f"
+        },
+        "api": {
+          "name": "shared_office365"
+        }
+      },
+      "shared_sharepointonline": {
+        "runtimeSource": "embedded",
+        "connection": {
+          "connectionReferenceLogicalName": "e20_sharedsharepointonline_e3472"
+        },
+        "api": {
+          "name": "shared_sharepointonline"
+        }
+      }
+    },
+    "definition": {
+      "$schema": "https://schema.management.azure.com/providers/Microsoft.Logic/schemas/2016-06-01/workflowdefinition.json#",
+      "contentVersion": "1.0.0.0",
+      "parameters": {
+        "$connections": {
+          "defaultValue": {},
+          "type": "Object"
+        },
+        "$authentication": {
+          "defaultValue": {},
+          "type": "SecureObject"
+        }
+      },
+      "triggers": {
+        "When_a_file_is_created_in_a_folder": {
+          "recurrence": {
+            "interval": 1,
+            "frequency": "Minute"
+          },
+          "metadata": {
+            "%252fShared%2bDocuments%252fForms%252fDocument": "/Shared Documents/Forms/Document",
+            "operationMetadataId": "deba2579-f051-4f6e-9d17-72b47d2fb526"
+          },
+          "type": "OpenApiConnection",
+          "inputs": {
+            "host": {
+              "connectionName": "shared_sharepointonline",
+              "operationId": "OnNewFile",
+              "apiId": "/providers/Microsoft.PowerApps/apis/shared_sharepointonline"
+            },
+            "parameters": {
+              "dataset": "https://eighty20pvtcomau.sharepoint.com/sites/TestCommunicationSite",
+              "folderId": "%252fShared%2bDocuments%252fForms%252fDocument",
+              "inferContentType": true
+            },
+            "authentication": "@parameters('$authentication')"
+          }
+        }
+      },
+      "actions": {
+        "Compose": {
+          "runAfter": {},
+          "metadata": {
+            "operationMetadataId": "06726770-57df-4f8e-ba35-f75ccc30d39d"
+          },
+          "type": "Compose",
+          "inputs": "test"
+        },
+        "Send_an_email_(V2)": {
+          "runAfter": {
+            "Compose": [
+              "Succeeded"
+            ]
+          },
+          "metadata": {
+            "operationMetadataId": "74a64d10-e2ef-4ea3-97d2-cf90731386e3"
+          },
+          "type": "OpenApiConnection",
+          "inputs": {
+            "host": {
+              "connectionName": "shared_office365",
+              "operationId": "SendEmailV2",
+              "apiId": "/providers/Microsoft.PowerApps/apis/shared_office365"
+            },
+            "parameters": {
+              "emailMessage/To": "jimmy.mo@eighty20pvt.com.au",
+              "emailMessage/Subject": "test",
+              "emailMessage/Body": "<p>Aprent flow success test</p>"
+            },
+            "authentication": "@parameters('$authentication')"
+          }
+        },
+        "Run_a_Child_Flow": {
+          "runAfter": {
+            "Send_an_email_(V2)": [
+              "Succeeded"
+            ]
+          },
+          "metadata": {
+            "operationMetadataId": "81c762d9-412d-417d-97c6-f37a75b1b3c7"
+          },
+          "type": "Workflow",
+          "inputs": {
+            "host": {
+              "workflowReferenceName": "acd33a95-57e5-ec11-bb3c-000d3a3073df"
+            }
+          }
+        }
+      }
+    },
+    "templateName": null
+  },
+  "schemaVersion": "1.0.0.0"
+}

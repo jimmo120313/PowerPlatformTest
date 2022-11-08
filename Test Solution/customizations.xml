@@ -1,0 +1,166 @@
+<ImportExportXml xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <Entities></Entities>
+  <Roles>
+    <Role id="{e73a057d-9fe5-ec11-bb3c-000d3a3073df}" name="RoleForTestSolution2" isinherited="1">
+      <IsCustomizable>1</IsCustomizable>
+      <RolePrivileges>
+        <RolePrivilege name="prvAppendCanvasApp" level="Global" />
+        <RolePrivilege name="prvAppendEntity" level="Global" />
+        <RolePrivilege name="prvAppendToCanvasApp" level="Global" />
+        <RolePrivilege name="prvAppendToEntity" level="Global" />
+        <RolePrivilege name="prvAppendToWorkflowSession" level="Local" />
+        <RolePrivilege name="prvAppendWorkflowSession" level="Local" />
+        <RolePrivilege name="prvAssignCanvasApp" level="Global" />
+        <RolePrivilege name="prvAssignWorkflowSession" level="Local" />
+        <RolePrivilege name="prvCreateCanvasApp" level="Global" />
+        <RolePrivilege name="prvCreateEntity" level="Global" />
+        <RolePrivilege name="prvCreateSharePointData" level="Global" />
+        <RolePrivilege name="prvCreateWorkflowSession" level="Local" />
+        <RolePrivilege name="prvDeleteCanvasApp" level="Global" />
+        <RolePrivilege name="prvDeleteEntity" level="Global" />
+        <RolePrivilege name="prvDeleteWorkflowSession" level="Local" />
+        <RolePrivilege name="prvReadCanvasApp" level="Global" />
+        <RolePrivilege name="prvReadEntity" level="Global" />
+        <RolePrivilege name="prvReadPluginAssembly" level="Global" />
+        <RolePrivilege name="prvReadPluginType" level="Global" />
+        <RolePrivilege name="prvReadSdkMessage" level="Global" />
+        <RolePrivilege name="prvReadSdkMessageProcessingStep" level="Global" />
+        <RolePrivilege name="prvReadSdkMessageProcessingStepImage" level="Global" />
+        <RolePrivilege name="prvReadSharePointData" level="Global" />
+        <RolePrivilege name="prvReadSharePointDocument" level="Global" />
+        <RolePrivilege name="prvReadWorkflowSession" level="Local" />
+        <RolePrivilege name="prvShareCanvasApp" level="Global" />
+        <RolePrivilege name="prvShareWorkflowSession" level="Local" />
+        <RolePrivilege name="prvWriteCanvasApp" level="Global" />
+        <RolePrivilege name="prvWriteEntity" level="Global" />
+        <RolePrivilege name="prvWriteSharePointData" level="Global" />
+        <RolePrivilege name="prvWriteWorkflowSession" level="Local" />
+      </RolePrivileges>
+    </Role>
+  </Roles>
+  <Workflows>
+    <Workflow WorkflowId="{acd33a95-57e5-ec11-bb3c-000d3a3073df}" Name="Test Child Flow">
+      <JsonFileName>/Workflows/TestChildFlow-ACD33A95-57E5-EC11-BB3C-000D3A3073DF.json</JsonFileName>
+      <Type>1</Type>
+      <Subprocess>0</Subprocess>
+      <Category>5</Category>
+      <Mode>0</Mode>
+      <Scope>4</Scope>
+      <OnDemand>0</OnDemand>
+      <TriggerOnCreate>0</TriggerOnCreate>
+      <TriggerOnDelete>0</TriggerOnDelete>
+      <AsyncAutodelete>0</AsyncAutodelete>
+      <SyncWorkflowLogOnFailure>0</SyncWorkflowLogOnFailure>
+      <StateCode>1</StateCode>
+      <StatusCode>2</StatusCode>
+      <RunAs>1</RunAs>
+      <IsTransacted>1</IsTransacted>
+      <IntroducedVersion>1.0.0.0</IntroducedVersion>
+      <IsCustomizable>1</IsCustomizable>
+      <BusinessProcessType>0</BusinessProcessType>
+      <IsCustomProcessingStepAllowedForOtherPublishers>1</IsCustomProcessingStepAllowedForOtherPublishers>
+      <PrimaryEntity>none</PrimaryEntity>
+      <LocalizedNames>
+        <LocalizedName languagecode="1033" description="Test Child Flow" />
+      </LocalizedNames>
+    </Workflow>
+    <Workflow WorkflowId="{a8f514e2-53e5-ec11-bb3c-000d3a3073df}" Name="Test Parent Flow">
+      <JsonFileName>/Workflows/TestParentFlow-A8F514E2-53E5-EC11-BB3C-000D3A3073DF.json</JsonFileName>
+      <Type>1</Type>
+      <Subprocess>0</Subprocess>
+      <Category>5</Category>
+      <Mode>0</Mode>
+      <Scope>4</Scope>
+      <OnDemand>0</OnDemand>
+      <TriggerOnCreate>0</TriggerOnCreate>
+      <TriggerOnDelete>0</TriggerOnDelete>
+      <AsyncAutodelete>0</AsyncAutodelete>
+      <SyncWorkflowLogOnFailure>0</SyncWorkflowLogOnFailure>
+      <StateCode>1</StateCode>
+      <StatusCode>2</StatusCode>
+      <RunAs>1</RunAs>
+      <IsTransacted>1</IsTransacted>
+      <IntroducedVersion>1.0.0.0</IntroducedVersion>
+      <IsCustomizable>1</IsCustomizable>
+      <BusinessProcessType>0</BusinessProcessType>
+      <IsCustomProcessingStepAllowedForOtherPublishers>1</IsCustomProcessingStepAllowedForOtherPublishers>
+      <PrimaryEntity>none</PrimaryEntity>
+      <LocalizedNames>
+        <LocalizedName languagecode="1033" description="Test Parent Flow" />
+      </LocalizedNames>
+    </Workflow>
+  </Workflows>
+  <FieldSecurityProfiles></FieldSecurityProfiles>
+  <Templates />
+  <EntityMaps />
+  <EntityRelationships />
+  <OrganizationSettings />
+  <optionsets />
+  <CustomControls />
+  <EntityDataProviders />
+  <CanvasApps>
+    <CanvasApp>
+      <Name>e20_testapp_3a9b5</Name>
+      <AppVersion>2022-06-06T04:36:39Z</AppVersion>
+      <Status>Ready</Status>
+      <CreatedByClientVersion>3.22053.15.0</CreatedByClientVersion>
+      <MinClientVersion>3.22053.15.0</MinClientVersion>
+      <Tags>{"primaryDeviceWidth":"1366","primaryDeviceHeight":"768","supportsPortrait":"true","supportsLandscape":"true","primaryFormFactor":"Tablet","publisherVersion":"3.22053.15","minimumRequiredApiVersion":"2.2.0","hasComponent":"false","hasUnlockedComponent":"false","isUnifiedRootApp":"false"}</Tags>
+      <IsCdsUpgraded>0</IsCdsUpgraded>
+      <GalleryItemId xsi:nil="true"></GalleryItemId>
+      <BackgroundColor>RGBA(0,176,240,1)</BackgroundColor>
+      <DisplayName>test App</DisplayName>
+      <Description xsi:nil="true"></Description>
+      <CommitMessage xsi:nil="true"></CommitMessage>
+      <Publisher xsi:nil="true"></Publisher>
+      <AuthorizationReferences>[]</AuthorizationReferences>
+      <ConnectionReferences>{}</ConnectionReferences>
+      <DatabaseReferences>{}</DatabaseReferences>
+      <AppComponents>[]</AppComponents>
+      <AppComponentDependencies>[]</AppComponentDependencies>
+      <CanConsumeAppPass>1</CanConsumeAppPass>
+      <CanvasAppType>0</CanvasAppType>
+      <BypassConsent>0</BypassConsent>
+      <AdminControlBypassConsent>0</AdminControlBypassConsent>
+      <EmbeddedApp xsi:nil="true"></EmbeddedApp>
+      <IntroducedVersion>1.0</IntroducedVersion>
+      <CdsDependencies>{"cdsdependencies":[]}</CdsDependencies>
+      <IsCustomizable>1</IsCustomizable>
+      <BackgroundImageUri>/CanvasApps/e20_testapp_3a9b5_BackgroundImageUri</BackgroundImageUri>
+      <DocumentUri>/CanvasApps/e20_testapp_3a9b5_DocumentUri.msapp</DocumentUri>
+    </CanvasApp>
+  </CanvasApps>
+  <Connectors>
+    <Connector>
+      <connectorid>5ac02e46-27e9-4db4-9cb4-16694397eaac</connectorid>
+      <description>The CustomAzureDevOps connector supports various Azure DevOps operations required for the ALM Accelerator for Power Platform solution</description>
+      <displayname>GraphAPIIntegration</displayname>
+      <iconbrandcolor>#007ee5</iconbrandcolor>
+      <name>e20_graphapiintegration</name>
+      <connectortype>1</connectortype>
+      <openapidefinition>/Connector/e20_graphapiintegration_openapidefinition.json</openapidefinition>
+      <connectionparameters>/Connector/e20_graphapiintegration_connectionparameters.json</connectionparameters>
+      <policytemplateinstances>/Connector/e20_graphapiintegration_policytemplateinstances.json</policytemplateinstances>
+      <iconblob>/Connector/e20_graphapiintegration_iconblob.Png</iconblob>
+    </Connector>
+  </Connectors>
+  <connectionreferences>
+    <connectionreference connectionreferencelogicalname="e20_sharedoffice365_2ee3f">
+      <connectionreferencedisplayname>Office 365 Outlook TestSolution2-2ee3f</connectionreferencedisplayname>
+      <connectorid>/providers/Microsoft.PowerApps/apis/shared_office365</connectorid>
+      <iscustomizable>1</iscustomizable>
+      <statecode>0</statecode>
+      <statuscode>1</statuscode>
+    </connectionreference>
+    <connectionreference connectionreferencelogicalname="e20_sharedsharepointonline_e3472">
+      <connectionreferencedisplayname>SharePoint TestSolution2-e3472</connectionreferencedisplayname>
+      <connectorid>/providers/Microsoft.PowerApps/apis/shared_sharepointonline</connectorid>
+      <iscustomizable>1</iscustomizable>
+      <statecode>0</statecode>
+      <statuscode>1</statuscode>
+    </connectionreference>
+  </connectionreferences>
+  <Languages>
+    <Language>1033</Language>
+  </Languages>
+</ImportExportXml>
